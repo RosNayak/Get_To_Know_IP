@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bkg1"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView_ip_icon"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/main_screen_ip_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textViewMessage"/>
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/get_to_know_your_ip"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/textColor"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/editTextIp"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/editTextIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_the_ip"
+        android:textColorHint="@color/white"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/edit_text_style"
+        app:layout_constraintEnd_toEndOf="@id/textViewMessage"
+        app:layout_constraintStart_toStartOf="@id/textViewMessage"
+        app:layout_constraintTop_toBottomOf="@id/textViewMessage"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:textAllCaps="false"
+        android:textColor="@color/bkg1"
+        android:enabled="false"
+        app:layout_constraintStart_toStartOf="@id/editTextIp"
+        app:layout_constraintEnd_toEndOf="@id/editTextIp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextIp"
+        android:background="@color/textColor2"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

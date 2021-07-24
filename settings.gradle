@@ -1,0 +1,2 @@
+rootProject.name = "Get To Know IP"
+include ':app'

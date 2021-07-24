@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bkg1"
+    tools:context=".ui.IPInfoActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/layoutReEnterIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardViewGoogleMaps">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextIPAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:hint="@string/enter_the_ip"
+            android:textColorHint="@color/white"
+            android:background="@drawable/edit_text_style"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonUpdateUi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/search"
+            android:textAllCaps="false"
+            android:textColor="@color/bkg1"
+            android:background="@color/textColor"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewGoogleMaps"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutReEnterIP"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cardViewIPDetailsLayout"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentGoogleMap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".ui.IPInfoActivity"
+                android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewIPDetailsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cardBkgColor"
+        app:cardCornerRadius="16dp"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardViewGoogleMaps"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardBkgColor"
+            android:padding="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/country"
+                style="@style/IPDetailsTextViewStyle"/>
+
+            <TextView
+                android:id="@+id/textViewRegion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/region"
+                style="@style/IPDetailsTextViewStyle"/>
+
+            <TextView
+                android:id="@+id/textViewCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/city"
+                style="@style/IPDetailsTextViewStyle"/>
+
+            <TextView
+                android:id="@+id/textViewPostal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/postal"
+                style="@style/IPDetailsTextViewStyle"/>
+
+            <TextView
+                android:id="@+id/textViewOrganization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/organization"
+                style="@style/IPDetailsTextViewStyle"
+                android:textSize="16sp"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Get To Know IP</string>
+    <string name="get_to_know_your_ip">Get to know your IP</string>
+    <string name="enter_the_ip">Enter the IP</string>
+    <string name="search">Search</string>
+    <string name="country">Country</string>
+    <string name="city">city</string>
+    <string name="region">region</string>
+    <string name="hostname">hostname</string>
+    <string name="postal">postal</string>
+    <string name="organization">Organization</string>
+    <string name="google_maps_api_key">AIzaSyDVcgwoOWes_YuRRmDS-kwzOPZ3AvhOl6Q</string>
+</resources>
